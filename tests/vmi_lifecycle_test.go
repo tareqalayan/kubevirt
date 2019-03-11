@@ -1250,11 +1250,9 @@ func getVirtLauncherLogs(virtCli kubecli.KubevirtClient, vmi *v1.VirtualMachineI
 	}
 	Expect(podName).ToNot(BeEmpty(), "Should find pod not scheduled for deletion")
 
-	var tailLines int64 = 100
 	logsRaw, err := virtCli.CoreV1().
 		Pods(namespace).
 		GetLogs(podName, &k8sv1.PodLogOptions{
-			TailLines: &tailLines,
 			Container: "compute",
 		}).
 		DoRaw()
