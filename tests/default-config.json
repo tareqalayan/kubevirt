@@ -1,7 +1,7 @@
 {
-    "storageClassLocal":       "local",
-    "storageClassHostPath":    "host-path",
-    "storageClassBlockVolume": "block-volume",
+    "storageClassLocal":       "local-sc",
+    "storageClassHostPath":     kubevirt-hostpath-provisioner ,
+    "storageClassBlockVolume": "rook-ceph-block",
     "storageClassRhel":        "rhel",
     "storageClassWindows":     "windows"
 }
